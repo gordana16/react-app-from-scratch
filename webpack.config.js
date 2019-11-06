@@ -1,5 +1,5 @@
-const webpack = require("webpack");
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
   entry: "./src/index.js",
@@ -7,7 +7,10 @@ const config = {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
   },
-
+  devServer: {
+    //default dir is "/dist"
+    writeToDisk: true
+  },
   module: {
     rules: [
       {
@@ -16,7 +19,13 @@ const config = {
         use: "babel-loader"
       }
     ]
-  }
+  },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html"
+    })
+  ]
 };
 
 module.exports = config;
