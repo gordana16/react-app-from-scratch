@@ -14,9 +14,15 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(js)$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: "babel-loader"
+      },
+      //a "hot" patch to react-dom
+      {
+        test: /\.js$/,
+        include: /node_modules/,
+        use: ["react-hot-loader/webpack"]
       }
     ]
   },
