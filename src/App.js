@@ -16,6 +16,7 @@ class App extends Component {
           Hello {this.props.name} {this.state.counter} times!!!
         </p>
         <button
+          className="btn-inc"
           onClick={() => this.setState({ counter: this.state.counter + 1 })}
         >
           +
