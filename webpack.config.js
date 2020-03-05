@@ -9,7 +9,7 @@ const config = {
   },
   devServer: {
     //default dir is "/dist"
-    writeToDisk: true
+    // writeToDisk: true
   },
   module: {
     rules: [
