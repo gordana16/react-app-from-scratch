@@ -62,4 +62,4 @@ then change working dir to dist. You will be in gh-pages branch.
 > git push origin gh-pages
 ```
 
-In repository settings choose 'gh-branch' as source for building your website.
+In repository settings choose 'gh-pages' branch as source for building your website.
